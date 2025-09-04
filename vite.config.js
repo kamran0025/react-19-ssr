@@ -1,0 +1,12 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  appType: 'custom', // for custom SSR
+  build: {
+    rollupOptions: {
+      input: '/src/client.jsx',
+    },
+  },
+});
